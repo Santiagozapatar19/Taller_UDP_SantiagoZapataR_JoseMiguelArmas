@@ -9,8 +9,8 @@ public class PeerA {
         connection.start(); // Inicia hilo de recepción
 
         // Esperar un poco para asegurar que está escuchando
-        try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+        try { Thread.sleep(10000); } catch (InterruptedException ignored) {}
 
-        connection.sendDatagram("Hola desde PeerA", "127.0.0.1", 6001); // Enviar a PeerB
+        connection.sendDatagram("Hola desde PeerA", "172.20.10.3", 6001); // Enviar a PeerB
     }
 }
